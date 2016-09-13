@@ -10,20 +10,21 @@
     <body>
         <div class="container" id="page-container">
             <h1 id="app-name">
-                <span class="glyphicon glyphicon-plus"></span> RIP Harambe
+                <span class="glyphicon glyphicon-facetime-video"></span> Movies!
             </h1>
             <!-- NB: glyphicon halflings are generally not free, but the developer made them free in bootstrap -->
             
             <h2 id="page-header">
-                Cincinnati Zoo doesn't allow smoking but they still smoked Harambe.
+                
             </h2>
-            <div class="btn-wrapper">
-                <label class="btn btn-info" for="my-file-selector">
-                    <input id="my-file-selector" type="file">
-                    Upload a picture of you!
-                </label>
-                <button type="button" class="btn btn-info" id="refreshbtn">Another song please</button>
+            <p id="inputBoxes">
+                Movie Title: <input type="text" id="movieName"/>
+                Year (if known): <input type="text" id="movieYear"/>
+            </p>
+            <div id="button">
+                <button>Take a look!</button>
             </div>
+            
         </div>
         <!-- 
             NB: You generally do not want to publically expose the server structure (eg. ./node_modules/...)

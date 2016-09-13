@@ -1,5 +1,5 @@
 html { 
-    background: url("http://theme.dima-lab.com/okab/images/landing-page-iphone/blurred-home-bg.jpg") no-repeat center center fixed; 
+    background: url("http://www.walldevil.com/wallpapers/w01/519626-android-android-jelly-bean-gaussian-blur-google-minimalistic.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -12,11 +12,8 @@ body {
 }
 
 h1#app-name {
+    margin-top: -100px;
     font-size:84px;
-}
-
-button#refreshbtn {
-    display:none;
 }
 
 img#selected-img{
@@ -27,9 +24,9 @@ img#selected-img{
     margin: 0 auto;
 }
 
-h2#page-header {
-    padding-top:20px;
-    padding-bottom:20px;
+h2#page-header { /*The text description of movies*/
+    font-size: 20px;
+    position: relative;
 }
 
 body #page-container {
@@ -38,10 +35,21 @@ body #page-container {
     margin-bottom: 40px;
 }
 
-.btn-wrapper {
-    padding: 20px 0;
+
+#poster {
+    margin-left: auto;
 }
 
-input#my-file-selector {
-    display:none;
+#movieName {
+    color: black;
+    margin-right: 50px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+
+#movieYear {
+    color: black;
+    
+    text-align: center;
 }
