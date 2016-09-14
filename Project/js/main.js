@@ -43,7 +43,7 @@ function getMovie(title,year){
         $("#dateReleased").append(data.Released);
         $("#genre").append(data.Genre);
         $("#directors").append(data.Director);
-        $("#actors").append(data.Actors);
+        $("#actors").append(data.Actors + "...");
         $("#awards").append(data.Awards);
         $("#stars").removeClass();
         starRating = data.imdbRating / 2;
