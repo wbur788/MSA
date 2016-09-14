@@ -8,23 +8,39 @@
         <link rel="stylesheet" type="text/css" href="./css/style.css">
     </head>
     <body>
+        
+        <div id="initial">
+            <h2 id="startMessage">
+                Interested in finding more about a movie? 
+            </h2>
+            <h3 id="continue">Click to continue</h3>
+        </div>
+
         <div class="container" id="page-container">
             <h1 id="app-name">
                 <span class="glyphicon glyphicon-facetime-video"></span> Movies!
             </h1>
-            <!-- NB: glyphicon halflings are generally not free, but the developer made them free in bootstrap -->
-            
             <h2 id="page-header">
-                
             </h2>
-            <p id="inputBoxes">
-                Movie Title: <input type="text" id="movieName"/>
-                Year (if known): <input type="text" id="movieYear"/>
-            </p>
-            <div id="button">
-                <button>Take a look!</button>
+            <div id="movieInfoBox">
+                <p id="yearReleased"></p>
+                <p id="dateReleased"></p>  
+                <p id="genre"></p>
+                <p id="directors"></p>
+                <p id="actors"></p>
+                <p id="awards"></p>   
             </div>
-            
+            <button id="searchAgain">Click to search for another movie!</button>
+        </div>
+
+        <div id="inputDiv">
+                <p id="inputBoxes">
+                    Movie Title: <input type="text" id="movieName"/>
+                    Year (if known): <input type="text" id="movieYear"/>
+                </p>
+                <div id="button">
+                    <button>Take a look!</button>
+                </div>
         </div>
         <!-- 
             NB: You generally do not want to publically expose the server structure (eg. ./node_modules/...)
