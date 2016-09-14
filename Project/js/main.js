@@ -3,6 +3,7 @@ var year;
 $('#page-container').hide();
 $('#movieInfoBox').hide();
 $('#inputDiv').hide();
+$(".fb-share-button").hide();
 $('#startMessage').css({"top": 60, "font-size": 30});
 
 
@@ -43,9 +44,11 @@ function getMovie(title,year){
         $("#dateReleased").append(data.Released);
         $("#genre").append(data.Genre);
         $("#directors").append(data.Director);
-        $("#actors").append(data.Actors);
+        $("#actors").append(data.Actors + "...");
         $("#awards").append(data.Awards);
+        $(".fb-share-button").show();
         $("#stars").removeClass();
+        
         starRating = data.imdbRating / 2;
         starRating = Math.round(starRating*2)/2;
         console.log(starRating);

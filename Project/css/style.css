@@ -221,3 +221,9 @@ body #initial {
 .stars-80:after { width: 80%; } /*This is 4 stars*/
 .stars-90:after { width: 90%; } /*This is 4.5 stars*/
 .stars-100:after { width: 100; } /*This is 5 stars*/
+
+.fb-share-button{
+    position:absolute;
+    padding-top: 20px;
+    margin-left: 550px;
+}
