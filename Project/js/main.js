@@ -3,7 +3,6 @@ var year;
 $('#page-container').hide();
 $('#movieInfoBox').hide();
 $('#inputDiv').hide();
-$("#searchAgain").hide();
 $('#startMessage').css({"top": 60, "font-size": 30});
 
 
@@ -35,11 +34,56 @@ function getMovie(title,year){
         title = $("#movieName").val(); 
         year = $("#movieYear").val();    
       } else {
-        //Displays the movie title and a short plot summary.
+        //Displays the movie title, a short plot summary and relevant info.
         $("#page-header").text(data.Plot);
         $('#movieInfoBox').show();
         $("#app-name").text(data.Title);
-        $("#searchAgain").show();
+        $("#ratingNo").append(data.imdbRating);
+        $("#yearReleased").append(data.Year);
+        $("#dateReleased").append(data.Released);
+        $("#genre").append(data.Genre);
+        $("#directors").append(data.Director);
+        $("#actors").append(data.Actors);
+        $("#awards").append(data.Awards);
+        $("#stars").removeClass();
+        starRating = data.imdbRating / 2;
+        starRating = Math.round(starRating*2)/2;
+        console.log(starRating);
+        switch(starRating) {
+          case 0.5:
+              $("#stars").addClass("stars-container stars-10");
+              break;
+          case 1:
+              $("#stars").addClass("stars-container stars-20");
+              break;
+          case 1.5:
+            $("#stars").addClass("stars-container stars-30");
+              break;
+          case 2:
+            $("#stars").addClass("stars-container stars-40");
+              break;
+          case 2.5:
+            $("#stars").addClass("stars-container stars-50");
+             break;
+          case 3:
+            $("#stars").addClass("stars-container stars-60");
+              break;
+          case 3.5:
+            $("#stars").addClass("stars-container stars-70");
+              break;
+          case 4:
+            $("#stars").addClass("stars-container stars-80");
+              break;
+          case 4.5:
+            $("#stars").addClass("stars-container stars-90");
+              break;
+          case 5:
+            $("#stars").addClass("stars-container stars-100");
+              break;
+          default:
+              $("#stars").addClass("stars-container stars-0");
+      };
+              
 
         //If the movie has a poster, then it will be displayed.
         if (data.Poster != null){
@@ -61,9 +105,4 @@ function getMovie(title,year){
 }
 
 });
-
-$('#searchAgain').click(function(){
-  $('#page-container').hide();
-  $("#inputDiv").show();  
-});    
 
