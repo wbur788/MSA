@@ -13,7 +13,6 @@ $('#initial').click(function(){
   $('#inputDiv').fadeIn(3800);
 });
 
-
 $('#button').click(function() {
   //Gets the title and year that the user inputs into the text boxes
   title = $("#movieName").val(); 
@@ -21,6 +20,7 @@ $('#button').click(function() {
   getMovie(title, year);
   //hides the textboxes and the button and show the title
   $("#inputDiv").hide();
+  $("#app-name").hide();
   
 
 //Starts api request after submitting information
@@ -30,12 +30,16 @@ function getMovie(title,year){
     url: "http://www.omdbapi.com/?t=" + title + "&y=" + year + "&plot=short&r=json", //url of the GET request
     success: function(data) {
       if (data.Response == "False"){ //Displays an error message, if no such movie was found and allows user to try again.
+        $(".board").hide();
+        $("#app-name").show();
         $("#app-name").text("Whoops! No such movie found. Please try again.");
         $("#inputDiv").show();
         title = $("#movieName").val(); 
         year = $("#movieYear").val();    
       } else {
         //Displays the movie title, a short plot summary and relevant info.
+        $("#app-name").show();
+        $(".board").hide();
         $("#page-header").text(data.Plot);
         $('#movieInfoBox').show();
         $("#app-name").text(data.Title);
