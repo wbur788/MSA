@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Wannachai's Project!</title>
+        <link href="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.css" type="text/css" rel="stylesheet" />
         <!--Boostrap's CSS-->
         <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
         <!--Custom CSS-->
@@ -15,27 +16,27 @@
             (function ($) {
                 function readyFn() {
                      $(document).ready(function() {
-                $('#no').novacancy({
-                    'reblinkProbability': 0.1,
-                    'blinkMin': 0.2,
-                    'blinkMax': 0.6,
-                    'loopMin': 8,
-                    'loopMax': 10,
-                    'color': '#ffffff',
-                    'glow': ['0 0 80px #ffffff', '0 0 30px #008000', '0 0 6px #0000ff']
-                }); 
-                $('#vacancy').novacancy({
-                    'blink': 1,
-                    'off': 1,
-                    'color': 'Red',
-                    'glow': ['0 0 80px Red', '0 0 30px FireBrick', '0 0 6px DarkRed']
-                });
+
+                    $('#no').novacancy({
+                        'reblinkProbability': 0.1,
+                        'blinkMin': 0.2,
+                        'blinkMax': 0.6,
+                        'loopMin': 8,
+                        'loopMax': 10,
+                        'color': '#ffffff',
+                        'glow': ['0 0 80px #ffffff', '0 0 30px #008000', '0 0 6px #0000ff']
+                    }); 
+                    $('#vacancy').novacancy({
+                        'blink': 1,
+                        'off': 1,
+                        'color': 'Red',
+                        'glow': ['0 0 80px Red', '0 0 30px FireBrick', '0 0 6px DarkRed']
+                    });
             });
                 }
                 $(document).ready(readyFn); 
             })(jQuery);           
         </script>
-
         <meta charset="utf-8"/>
     </head>
     <body>
@@ -51,6 +52,7 @@
         </script>
 
         <div id="initial">
+  
             <h2 id="startMessage">
                 Interested in finding more about a movie or TV Show? 
             </h2>
@@ -118,6 +120,7 @@
         <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <!--Custom Script-->
         <script src="./js/main.js"></script>
+        
 
         
     </body>

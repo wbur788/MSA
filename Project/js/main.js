@@ -4,13 +4,14 @@ $('#page-container').hide();
 $('#movieInfoBox').hide();
 $('#inputDiv').hide();
 $(".fb-share-button").hide();
+$(".board").hide();
 $('#startMessage').css({"top": 60, "font-size": 30});
-
 
 $('#initial').click(function(){
   $('#initial').fadeOut();
   $('#page-container').fadeIn(3800);
   $('#inputDiv').fadeIn(3800);
+  $('.board').fadeIn(3800);
 });
 
 $('#button').click(function() {
@@ -55,7 +56,7 @@ function getMovie(title,year){
         
         starRating = data.imdbRating / 2;
         starRating = Math.round(starRating*2)/2;
-        console.log(starRating);
+  
         switch(starRating) {
           case 0.5:
               $("#stars").addClass("stars-container stars-10");
